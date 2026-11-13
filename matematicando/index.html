@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MATEMATICANDO — Matemática para brincar, descobrir e aprender</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;family=Nunito:wght@800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#0B2D6B;--blue:#2F80ED;--yellow:#FFC629;--green:#22C55E;--pale:#E8F4FF;--ink:#173557}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;width:100%;font:400 16px/1.65 Lexend,sans-serif;color:var(--ink)}.app-wrapper{width:100%;background:#fff}
+    body :is(h1,h2,h3){font-family:Nunito,sans-serif;font-weight:800;line-height:1.16;letter-spacing:-.025em}body h1{font-size:clamp(2.25rem,4.2vw,4rem)}body h2{font-size:clamp(1.85rem,3vw,2.6rem)}body h3{font-size:1.3rem}
+    body .panel h2{font-size:clamp(1.35rem,2vw,1.7rem)}body .site-footer h2{font-size:1.15rem;color:#fff}
+    .page-width{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(20px,4vw,48px)}.section-space{padding-block:clamp(64px,8vw,104px)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:11px 22px;border-radius:9px;border:1px solid transparent;font:700 16px Lexend,sans-serif;text-align:center;cursor:pointer;transition:background .18s,transform .18s,box-shadow .18s}
+    .btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 5px 14px #0b2d6b25}.btn:active:not(:disabled){transform:translateY(0)}.btn:disabled{opacity:.65;cursor:wait}.btn-yellow{background:var(--yellow);color:var(--navy)}.btn-yellow:hover{background:#f1b91e}.btn-navy{background:var(--navy);color:white}.btn-navy:hover{background:#174180}.btn-outline{background:white;color:var(--navy);border-color:var(--blue);border-width:2px}.btn-outline:hover{background:var(--pale)}.btn-outline-light{background:transparent;color:white;border-color:#a7c6ed}.btn-outline-light:hover{background:#ffffff19}
+    .site-header{background:var(--navy);color:#fff}.header-inner{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:inline-flex;align-items:center;gap:12px;background:none;border:0;padding:4px 0;color:white;cursor:pointer;flex-shrink:0;min-width:0}.brand-mark{width:59px;height:59px;flex:none;overflow:visible}.brand-name{font:800 clamp(19px,2.2vw,30px)/1 Nunito,sans-serif;letter-spacing:-.035em;white-space:nowrap;color:#fff}
+    .nav-links{display:flex;align-items:center;gap:clamp(5px,.8vw,14px)}.nav-link{border:0;background:none;color:#fff;font:600 16px Lexend,sans-serif;cursor:pointer;padding:9px 3px;white-space:nowrap}.nav-link:hover,.footer-link:hover{text-decoration:underline;text-underline-offset:5px}.menu-toggle{display:none;background:transparent;border:1px solid #a7c6ed;border-radius:8px;color:white;width:46px;height:46px;align-items:center;justify-content:center;cursor:pointer;flex:none}
+    .hero{background:var(--pale)}.hero-grid{display:grid;grid-template-columns:58% 42%;align-items:center;gap:clamp(20px,3vw,35px);padding-block:clamp(66px,8vw,106px)}.hero-copy{max-width:670px}.hero-copy p:not(.eyebrow){font-size:clamp(17px,1.5vw,20px);max-width:620px}.hero-art{width:min(430px,100%);max-width:430px;margin-inline:auto}.hero-art svg{display:block;width:100%;height:auto}.identity-brand{width:100%;border-radius:10px;padding:12px}.identity-brand svg{display:block;width:100%;height:auto}.identity-brand-light{background:#fff;border:1px solid #dbe9f5}.identity-brand-dark{background:var(--navy)}.eyebrow{color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+    .feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.feature-card{background:#fff;border:1px solid #D6E4F0;border-radius:12px;padding:26px;box-shadow:0 3px 12px #0b2d6b08;height:100%}.icon-square{display:grid;place-items:center;width:42px;height:42px;background:var(--pale);color:var(--blue);border-radius:9px;margin-bottom:20px}.icon-square svg{width:21px;height:21px}
+    .steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;position:relative}.steps:before{content:"";position:absolute;left:8%;right:8%;top:23px;height:2px;background:#bbd6f0}.step{position:relative}.step-number{display:grid;place-items:center;width:46px;height:46px;background:var(--blue);color:white;border-radius:50%;font-weight:700;margin-bottom:20px;transition:background .2s,color .2s}.step:hover .step-number{background:var(--yellow);color:var(--navy)}
+    .audiences{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:25px}.audience{border-top:2px solid #b9d6f0;padding-top:19px}.audience svg{width:24px;height:24px;color:var(--blue)}
+    .access-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.access-grid .btn{min-height:86px;justify-content:space-between;text-align:left;padding-inline:16px}.access-grid .btn:active{background:#2F80ED}.access-label{flex:1}.access-grid svg{width:20px;height:20px;flex:none}
+    .commercial{background:var(--navy);color:#fff}.commercial-inner{display:flex;justify-content:space-between;align-items:center;gap:35px}.commercial-inner>div:first-child{max-width:710px}
+    .site-footer{background:var(--navy);color:#fff}.footer-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}.footer-link{display:block;border:0;background:transparent;color:#e4f0ff;font:400 16px Lexend,sans-serif;cursor:pointer;text-align:left;padding:7px 0;min-height:38px}
+    .inner-page{padding-block:48px 90px}.panel{background:white;border:1px solid #dbe9f5;border-radius:12px;padding:clamp(22px,4vw,42px)}.soft{background:var(--pale);border-radius:9px;padding:18px}.choice{min-height:75px;display:flex;align-items:center;gap:12px;padding:13px 20px;background:#fff;border:2px solid #bdd5ea;border-radius:10px;color:var(--navy);font:700 16px Lexend,sans-serif;cursor:pointer}.choice:hover:not(:disabled){border-color:var(--blue);background:var(--pale)}.choice:disabled{opacity:.65;cursor:default}.sequence-token{display:grid;place-items:center;width:clamp(54px,10vw,76px);aspect-ratio:1;border-radius:10px;background:var(--pale);color:var(--blue);font-size:40px;font-weight:700}.sequence-token[data-shape=square]{background:#fff3cb;color:#926200}.sequence-token[data-shape=triangle]{background:#e1f8e9;color:#13834b}
+    .illustration{display:block;width:100%;height:auto;border-radius:10px}
+    .field{width:100%;border:1px solid #9cbad5;border-radius:8px;padding:12px 14px;background:white;color:var(--ink);font:inherit}label{font-weight:600;display:block;margin-bottom:6px}:is(button,input,textarea,select):focus-visible{outline:3px solid var(--yellow);outline-offset:3px}.hero :is(button,input):focus-visible,.inner-page :is(button,input):focus-visible,.dialog-panel :is(button,input,textarea,select):focus-visible{outline-color:var(--blue)}[hidden]{display:none!important}
+    .modal-backdrop{position:fixed;inset:0;z-index:50;background:#061b3bcc;display:grid;place-items:center;padding:18px}.dialog-panel{position:relative;width:min(100%,650px);max-height:90vh;overflow:auto;background:white;border-radius:16px;padding:clamp(22px,4vw,36px);box-shadow:0 20px 60px #0005}.dialog-close{position:absolute;right:16px;top:16px;border:0;background:#e8f4ff;color:var(--navy);width:40px;height:40px;border-radius:8px;display:grid;place-items:center;cursor:pointer}
+    @media(max-width:1050px){.header-inner{gap:9px}.nav-links{gap:4px}.nav-link{font-size:14px}.nav-links .btn{padding-inline:12px}.brand-mark{width:46px;height:46px}.brand-name{font-size:clamp(18px,2vw,23px)}.feature-grid,.access-grid,.audiences,.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:767px){.menu-toggle{display:inline-flex}.header-inner{flex-wrap:wrap;min-height:78px;padding-block:13px}.brand-mark{width:52px;height:52px}.brand-name{font-size:clamp(18px,4.5vw,25px)}.nav-links{display:none;width:100%;flex-direction:column;align-items:stretch;gap:3px;padding:12px 0;border-top:1px solid #ffffff50}.nav-links.is-open{display:flex}.nav-links .nav-link{text-align:left;padding:11px 5px;font-size:16px}.nav-links .btn{width:100%}.hero-grid{grid-template-columns:1fr;padding-block:55px 45px}.steps{grid-template-columns:1fr;gap:20px;padding-left:8px}.steps:before{left:30px;right:auto;top:22px;bottom:22px;width:2px;height:auto}.step{display:grid;grid-template-columns:46px 1fr;column-gap:18px}.step-number{grid-row:span 2;margin-bottom:0}.step h3{margin:1px 0 3px}.step p{margin:0}.commercial-inner{align-items:flex-start;flex-direction:column}.hero-actions,.commercial-actions{display:flex;flex-direction:column}.hero-actions .btn,.commercial-actions .btn{width:100%}}
+    @media(max-width:600px){.feature-grid,.audiences,.access-grid,.footer-grid{grid-template-columns:1fr}.brand{gap:7px}.brand-mark{width:43px;height:43px}.brand-name{font-size:clamp(16px,5vw,22px)}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+ </head>
+ <body>
+  <div class="app-wrapper">
+   <header class="site-header">
+    <div class="page-width header-inner">
+     <button type="button" data-view="home" aria-label="MATEMATICANDO — ir para o início" class="brand">
+      <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="Símbolo MATEMATICANDO: formas azuis, círculo amarelo e triângulo verde" focusable="false">
+       <path fill="#2F80ED" d="M5 55V14Q5 7 12 7h18v48H5Z" /><path fill="#FFFFFF" d="M34 7h18q7 0 7 7v41H34V7Z" /><circle cx="32" cy="21" r="10" fill="#FFC629" /><path d="M32 34 48 55H16Z" fill="#22C55E" />
+      </svg><span class="brand-name">MATEMATICANDO</span>
+     </button>
+     <button id="menu-toggle" type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav"><i data-lucide="menu"></i></button>
+     <nav id="site-nav" class="nav-links" aria-label="Navegação principal">
+      <button type="button" data-anchor="recursos" class="nav-link">Recursos</button>
+      <button type="button" data-anchor="como-funciona" class="nav-link">Como funciona</button>
+      <button type="button" data-anchor="para-quem" class="nav-link">Para quem</button>
+      <button type="button" data-view="about" class="nav-link">Sobre</button>
+      <button type="button" data-anchor="acessos" class="nav-link">Entrar</button>
+      <button type="button" data-view="activity" class="btn btn-yellow">Experimentar</button>
+     </nav>
+    </div>
+   </header>
+   <main class="w-full">
+    <div id="navigation-actions" class="page-width pt-7 flex flex-wrap gap-3" hidden>
+     <button id="back-button" type="button" class="btn btn-outline">← Voltar</button>
+     <button type="button" data-view="home" class="btn btn-yellow">Página inicial</button>
+    </div>
+
+    <div id="home" class="view">
+     <section class="hero" aria-labelledby="home-title">
+      <div class="page-width hero-grid">
+       <div class="hero-copy">
+        <p class="eyebrow mb-4">Educação infantil e anos iniciais</p>
+        <h1 id="home-title" class="mb-6">Matemática para brincar, descobrir e aprender</h1>
+        <p class="mb-8">Atividades curtas e lúdicas para as crianças explorarem padrões, formas e quantidades — com acompanhamento simples para professores, famílias e coordenação pedagógica.</p>
+        <div class="hero-actions flex flex-wrap gap-3">
+         <button type="button" data-view="activity" class="btn btn-yellow">Experimentar uma atividade</button>
+         <button type="button" data-anchor="recursos" class="btn btn-outline">Conhecer os recursos</button>
+        </div>
+       </div>
+       <div class="hero-art" role="img" aria-label="Ilustração matemática abstrata com círculo, quadrado, triângulo e padrões geométricos">
+        <svg viewBox="0 0 620 500" aria-hidden="true" focusable="false"><defs>
+          <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0B2D6B" flood-opacity=".12" /></filter>
+         </defs>
+         <rect x="28" y="28" width="564" height="444" rx="42" fill="#FFFFFF" opacity=".55" />
+         <path d="M96 356C180 276 238 398 326 300S456 198 536 126" fill="none" stroke="#2F80ED" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 20" opacity=".65" />
+         <path d="M86 390h450" stroke="#0B2D6B" stroke-width="3" stroke-linecap="round" opacity=".16" />
+         <g filter="url(#soft-shadow)">
+          <rect x="104" y="112" width="138" height="138" rx="30" fill="#FFFFFF" />
+          <circle cx="173" cy="181" r="48" fill="#FFC629" /><circle cx="173" cy="181" r="18" fill="#E8F4FF" />
+          <rect x="306" y="88" width="116" height="116" rx="28" fill="#2F80ED" transform="rotate(12 364 146)" />
+          <path d="m344 146 20 20 37-42" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M414 260 478 150l64 110Z" fill="#22C55E" opacity=".92" /><path d="m478 196 36 64h-72Z" fill="#E8F4FF" />
+          <rect x="190" y="312" width="214" height="52" rx="18" fill="#FFFFFF" />
+          <rect x="212" y="326" width="22" height="22" rx="7" fill="#2F80ED" /><rect x="250" y="326" width="22" height="22" rx="7" fill="#FFC629" /><rect x="288" y="326" width="22" height="22" rx="7" fill="#22C55E" /><rect x="326" y="326" width="22" height="22" rx="7" fill="#2F80ED" /><rect x="364" y="326" width="22" height="22" rx="7" fill="#FFC629" />
+         </g>
+         <circle cx="116" cy="286" r="7" fill="#FFC629" /><circle cx="474" cy="332" r="8" fill="#2F80ED" /><circle cx="526" cy="224" r="6" fill="#22C55E" /><path d="M132 92h64M454 104h42" stroke="#0B2D6B" stroke-width="5" stroke-linecap="round" opacity=".28" />
+        </svg>
+       </div>
+      </div>
+     </section>
+
+     <section id="recursos" class="page-width section-space" aria-labelledby="features-title">
+      <p class="eyebrow mb-3">Recursos</p>
+      <h2 id="features-title" class="mb-9">Tudo o que é preciso para aprender brincando</h2>
+      <div class="feature-grid">
+       <article class="feature-card"><span class="icon-square"><i data-lucide="sliders-horizontal"></i></span>
+        <h3 class="mb-3">Desafios ajustáveis</h3>
+        <p>Níveis de dificuldade que acompanham o ritmo de cada criança, sem pressa e sem pressão.</p>
+       </article>
+       <article class="feature-card"><span class="icon-square"><i data-lucide="chart-no-axes-combined"></i></span>
+        <h3 class="mb-3">Acompanhamento claro</h3>
+        <p>Resumo de tentativas e acertos para orientar a mediação do professor no dia a dia.</p>
+       </article>
+       <article class="feature-card"><span class="icon-square"><i data-lucide="book-open-check"></i></span>
+        <h3 class="mb-3">Alinhado à BNCC</h3>
+        <p>Propostas ligadas aos campos de experiência e às habilidades de matemática dos anos iniciais.</p>
+       </article>
+       <article class="feature-card"><span class="icon-square"><i data-lucide="users-round"></i></span>
+        <h3 class="mb-3">Para toda a comunidade</h3>
+        <p>Acessos pensados para crianças, professores, famílias e coordenação, cada um com o que precisa.</p>
+       </article>
+      </div>
+     </section>
+
+     <section id="como-funciona" class="bg-[#E8F4FF] section-space" aria-labelledby="how-title">
+      <div class="page-width">
+       <h2 id="how-title" class="mb-12">Como funciona</h2>
+       <div class="steps">
+        <div class="step"><span class="step-number">1</span><h3 class="mb-2">Escolha</h3><p>O professor seleciona uma atividade adequada à turma.</p></div>
+        <div class="step"><span class="step-number">2</span><h3 class="mb-2">Explore</h3><p>A criança observa, testa hipóteses e escolhe uma resposta.</p></div>
+        <div class="step"><span class="step-number">3</span><h3 class="mb-2">Receba retorno</h3><p>Mensagens gentis explicam o padrão e incentivam nova tentativa.</p></div>
+        <div class="step"><span class="step-number">4</span><h3 class="mb-2">Acompanhe</h3><p>O professor vê um resumo simples do que foi tentado.</p></div>
+        <div class="step"><span class="step-number">5</span><h3 class="mb-2">Converse</h3><p>Famílias e coordenação recebem ideias para continuar aprendendo.</p></div>
+       </div>
+      </div>
+     </section>
+
+     <section id="para-quem" class="page-width section-space" aria-labelledby="audience-title">
+      <h2 id="audience-title" class="mb-10">Para quem é o MATEMATICANDO</h2>
+      <div class="audiences">
+       <div class="audience"><i data-lucide="shapes"></i><h3 class="mt-3 mb-2">Crianças</h3><p>Brincam com formas, sequências e quantidades em atividades curtas e coloridas.</p></div>
+       <div class="audience"><i data-lucide="presentation"></i><h3 class="mt-3 mb-2">Professores</h3><p>Planejam, mediam e acompanham o progresso da turma com poucos cliques.</p></div>
+       <div class="audience"><i data-lucide="heart-handshake"></i><h3 class="mt-3 mb-2">Famílias</h3><p>Encontram sugestões simples para levar a matemática para o cotidiano de casa.</p></div>
+       <div class="audience"><i data-lucide="network"></i><h3 class="mt-3 mb-2">Coordenação</h3><p>Tem uma visão geral das experiências coletivas, sem expor dados individuais.</p></div>
+      </div>
+     </section>
+
+     <section id="acessos" class="bg-[#E8F4FF] section-space" aria-labelledby="access-title">
+      <div class="page-width">
+       <h2 id="access-title" class="mb-3">Escolha seu acesso</h2>
+       <p class="mb-8">Cada perfil tem uma área própria. Nesta demonstração, nenhum login é necessário.</p>
+       <div class="access-grid">
+        <button type="button" data-view="activity" class="btn btn-navy"><i data-lucide="shapes" aria-hidden="true"></i><span class="access-label">Sou criança</span><span aria-hidden="true">→</span></button>
+        <button type="button" data-view="teacher" class="btn btn-navy"><i data-lucide="presentation" aria-hidden="true"></i><span class="access-label">Sou professor(a)</span><span aria-hidden="true">→</span></button>
+        <button type="button" data-view="family" class="btn btn-navy"><i data-lucide="heart-handshake" aria-hidden="true"></i><span class="access-label">Sou da família</span><span aria-hidden="true">→</span></button>
+        <button type="button" data-view="coordination" class="btn btn-navy"><i data-lucide="network" aria-hidden="true"></i><span class="access-label">Sou da coordenação</span><span aria-hidden="true">→</span></button>
+       </div>
+      </div>
+     </section>
+
+     <section class="commercial section-space" aria-labelledby="commercial-title">
+      <div class="page-width commercial-inner">
+       <div>
+        <h2 id="commercial-title" class="mb-5">Leve o MATEMATICANDO para a sua escola</h2>
+        <p>Agende uma demonstração e conheça como a plataforma pode apoiar o ensino de matemática na educação infantil e nos anos iniciais.</p>
+       </div>
+       <div class="commercial-actions flex flex-wrap gap-3">
+        <button type="button" data-open-demo class="btn btn-yellow">Solicitar demonstração</button>
+        <button type="button" data-anchor="recursos" class="btn btn-outline-light">Ver recursos</button>
+       </div>
+      </div>
+     </section>
+    </div>
+
+    <section id="about" class="view page-width inner-page" aria-labelledby="about-title" hidden>
+     <p class="eyebrow mb-3">Sobre o projeto</p>
+     <h1 id="about-title" class="mb-8">Sobre o MATEMATICANDO</h1>
+     <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="grid sm:grid-cols-2 gap-5 items-start">
+       <div>
+        <p class="mb-3">Versão para fundo claro</p>
+        <div class="identity-brand identity-brand-light" role="img" aria-label="MATEMATICANDO — versão para fundo claro">
+         <svg viewBox="0 0 420 150" aria-hidden="true" focusable="false"><g transform="translate(12 18)">
+           <path fill="#2F80ED" d="M5 112V14Q5 7 12 7h50v105H5Z" /><path fill="#0B2D6B" d="M70 7h50q7 0 7 7v98H70V7Z" /><circle cx="67" cy="35" r="22" fill="#FFC629" /><path d="M67 62 99 105H35Z" fill="#22C55E" />
+          </g><text x="155" y="91" fill="#0B2D6B" font-family="Nunito, sans-serif" font-size="31" font-weight="800" letter-spacing="-1.2">MATEMATICANDO</text>
+         </svg>
+        </div>
+       </div>
+       <div>
+        <p class="mb-3">Versão para fundo escuro</p>
+        <div class="identity-brand identity-brand-dark" role="img" aria-label="MATEMATICANDO — versão para fundo escuro">
+         <svg viewBox="0 0 420 150" aria-hidden="true" focusable="false"><g transform="translate(12 18)">
+           <path fill="#2F80ED" d="M5 112V14Q5 7 12 7h50v105H5Z" /><path fill="#FFFFFF" d="M70 7h50q7 0 7 7v98H70V7Z" /><circle cx="67" cy="35" r="22" fill="#FFC629" /><path d="M67 62 99 105H35Z" fill="#22C55E" />
+          </g><text x="155" y="91" fill="#FFFFFF" font-family="Nunito, sans-serif" font-size="31" font-weight="800" letter-spacing="-1.2">MATEMATICANDO</text>
+         </svg>
+        </div>
+       </div>
+      </div>
+      <div>
+       <h2 id="identity-heading" class="mb-5">Uma identidade feita de formas</h2>
+       <p>O símbolo une um livro aberto, um círculo e um triângulo: aprender, descobrir e construir. As cores — azul, amarelo e verde — são alegres, têm bom contraste e funcionam tanto em fundos claros quanto escuros.</p>
+      </div>
+     </div>
+     <div class="grid md:grid-cols-3 gap-5 mt-9">
+      <article class="panel">
+       <h2 id="pedagogy-title" class="mb-3">Proposta pedagógica</h2>
+       <p>Partimos da brincadeira e da investigação: a criança observa, levanta hipóteses, erra sem medo e conversa sobre o que descobriu, com o professor como mediador.</p>
+      </article>
+      <article class="panel">
+       <h2 id="accessibility-title" class="mb-3">Acessibilidade</h2>
+       <p>Navegação por teclado, textos alternativos, alto contraste, foco visível e respeito à preferência por menos movimento estão presentes em toda a plataforma.</p>
+      </article>
+      <article class="panel">
+       <h2 id="privacy-title" class="mb-3">Privacidade</h2>
+       <p>Esta demonstração não coleta nem armazena dados pessoais. Os registros de atividade existem apenas enquanto a página estiver aberta.</p>
+      </article>
+     </div>
+    </section>
+
+    <section id="activity" class="view page-width inner-page" aria-labelledby="activity-title" hidden>
+     <div class="panel">
+      <p class="eyebrow mb-2">Atividade de padrões</p>
+      <h1 id="activity-title" class="mb-3">Qual é a próxima figura?</h1>
+      <p class="mb-7">Observe a sequência com atenção. As figuras se repetem em uma ordem. Descubra qual figura vem no lugar do ponto de interrogação.</p>
+      <div id="sequence" class="flex flex-wrap gap-2 sm:gap-4 mb-8" aria-label="Sequência de figuras"></div>
+      <h2 class="mb-4">Escolha a próxima figura</h2>
+      <div class="flex flex-wrap gap-3 mb-5" role="group" aria-label="Escolha a próxima figura">
+       <button type="button" class="choice" data-choice="circle" aria-label="Círculo"><span aria-hidden="true" class="text-[#2F80ED] text-3xl">●</span><span>Círculo</span></button>
+       <button type="button" class="choice" data-choice="square" aria-label="Quadrado"><span aria-hidden="true" class="text-[#926200] text-3xl">■</span><span>Quadrado</span></button>
+       <button type="button" class="choice" data-choice="triangle" aria-label="Triângulo"><span aria-hidden="true" class="text-[#13834b] text-3xl">▲</span><span>Triângulo</span></button>
+      </div>
+      <p id="activity-feedback" role="status" aria-live="polite" class="soft mb-5"></p>
+      <button id="new-sequence" type="button" class="btn btn-yellow">Nova sequência</button>
+     </div>
+    </section>
+
+    <section id="teacher" class="view page-width inner-page" aria-labelledby="teacher-title" hidden>
+     <div class="panel">
+      <p class="eyebrow mb-2">Área do professor</p>
+      <h1 id="teacher-title" class="mb-3">Acompanhamento da atividade</h1>
+      <p class="mb-6">Veja as tentativas feitas na atividade de padrões durante esta utilização. Use as informações para planejar conversas e novas propostas com a turma.</p>
+      <div class="soft mb-8">
+       <h2 class="mb-2">Resumo</h2>
+       <p id="teacher-summary" aria-live="polite"></p>
+      </div>
+      <h2 class="mb-4">Registro de tentativas</h2>
+      <p id="teacher-empty" class="soft">Ainda não há tentativas. Abra a atividade “Qual é a próxima figura?” e faça uma escolha para ver o registro aqui.</p>
+      <ol id="teacher-records" class="space-y-3" aria-live="polite"></ol>
+     </div>
+    </section>
+
+    <section id="family" class="view page-width inner-page" aria-labelledby="family-title" hidden>
+     <div class="panel grid md:grid-cols-2 gap-8 items-center">
+      <div>
+       <p class="eyebrow mb-2">Para as famílias</p>
+       <h1 id="family-title" class="mb-4">Matemática também se aprende em casa</h1>
+       <p class="mb-5">Contar, comparar, organizar e perceber padrões fazem parte da rotina. Pequenas conversas no dia a dia ajudam a criança a ganhar confiança com os números.</p>
+       <p class="soft">Esta área não mostra notas nem dados individuais. São apenas ideias para brincar juntos.</p>
+      </div>
+      <svg class="illustration" viewBox="0 0 480 360" role="img" aria-label="Ilustração de blocos coloridos empilhados e contados">
+       <rect width="480" height="360" rx="16" fill="#E8F4FF" />
+       <path d="M40 300h400" stroke="#0B2D6B" stroke-width="4" stroke-linecap="round" opacity=".2" />
+       <rect x="80" y="230" width="70" height="70" rx="12" fill="#2F80ED" /><rect x="80" y="160" width="70" height="70" rx="12" fill="#FFC629" /><rect x="80" y="90" width="70" height="70" rx="12" fill="#22C55E" />
+       <rect x="200" y="230" width="70" height="70" rx="12" fill="#FFC629" /><rect x="200" y="160" width="70" height="70" rx="12" fill="#2F80ED" />
+       <rect x="320" y="230" width="70" height="70" rx="12" fill="#22C55E" />
+       <text x="115" y="70" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="36" fill="#0B2D6B">3</text>
+       <text x="235" y="140" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="36" fill="#0B2D6B">2</text>
+       <text x="355" y="210" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="36" fill="#0B2D6B">1</text>
+      </svg>
+     </div>
+     <div class="grid md:grid-cols-2 gap-5 mt-6">
+      <article class="panel">
+       <h2 class="mb-3">Padrões na cozinha</h2>
+       <p>Ao arrumar a mesa, monte sequências com talheres ou frutas (garfo, colher, garfo, colher…) e pergunte à criança o que vem depois.</p>
+      </article>
+      <article class="panel">
+       <h2 class="mb-3">Caça às formas</h2>
+       <p>Em um passeio, procurem juntos objetos redondos, quadrados e triangulares. Contem quantos encontraram de cada tipo.</p>
+      </article>
+     </div>
+    </section>
+
+    <section id="coordination" class="view page-width inner-page" aria-labelledby="coord-title" hidden>
+     <div class="panel grid md:grid-cols-2 gap-8 items-center">
+      <div>
+       <p class="eyebrow mb-2">Coordenação pedagógica</p>
+       <h1 id="coord-title" class="mb-4">Visão geral das experiências</h1>
+       <p class="mb-5">Acompanhe como a matemática está sendo vivida nas turmas, com foco em experiências coletivas e não em classificações individuais.</p>
+       <p class="soft">Demonstração: os exemplos abaixo são fictícios e não representam pessoas ou turmas reais.</p>
+      </div>
+      <svg class="illustration" viewBox="0 0 480 360" role="img" aria-label="Ilustração de um painel com gráfico de barras e indicadores">
+       <rect width="480" height="360" rx="16" fill="#E8F4FF" />
+       <rect x="40" y="40" width="400" height="280" rx="16" fill="#FFFFFF" />
+       <rect x="70" y="70" width="140" height="14" rx="7" fill="#0B2D6B" opacity=".8" />
+       <rect x="70" y="94" width="90" height="10" rx="5" fill="#0B2D6B" opacity=".25" />
+       <path d="M70 290h340" stroke="#0B2D6B" stroke-width="2" opacity=".2" />
+       <rect x="90" y="200" width="44" height="90" rx="8" fill="#2F80ED" /><rect x="160" y="160" width="44" height="130" rx="8" fill="#FFC629" /><rect x="230" y="180" width="44" height="110" rx="8" fill="#22C55E" /><rect x="300" y="140" width="44" height="150" rx="8" fill="#2F80ED" />
+       <circle cx="395" cy="85" r="18" fill="#FFC629" />
+      </svg>
+     </div>
+     <div class="grid md:grid-cols-2 gap-5 mt-6">
+      <article class="panel">
+       <h2 class="mb-3">Experiências em destaque</h2>
+       <p class="mb-4">Registros ilustrativos de propostas coletivas realizadas nas turmas.</p>
+       <p class="soft mb-3"><strong>Jogos de percurso:</strong> as crianças exploraram trajetos, posições e direções no pátio.</p>
+       <p class="soft"><strong>Organização de materiais:</strong> rodas de conversa sobre formas, agrupamentos e quantidades.</p>
+      </article>
+      <article class="panel">
+       <h2 class="mb-3">Relatório demonstrativo</h2>
+       <p class="mb-4">Baixe um resumo em texto com as experiências ilustrativas e o total de tentativas desta utilização.</p>
+       <p class="soft mb-5">O relatório não inclui nomes nem dados individuais.</p>
+       <button id="download-report" type="button" class="btn btn-navy">Baixar relatório</button>
+       <p id="report-status" role="status" aria-live="polite" class="mt-4" hidden></p>
+      </article>
+     </div>
+    </section>
+   </main>
+
+   <footer class="site-footer pt-14 pb-8">
+    <div class="page-width">
+     <div class="footer-grid">
+      <div>
+       <h2 class="mb-3">MATEMATICANDO</h2>
+       <button type="button" data-view="about" class="footer-link">Sobre o projeto</button>
+       <button type="button" data-view="about" data-focus="identity-heading" class="footer-link">Identidade visual</button>
+       <button type="button" data-view="about" data-focus="pedagogy-title" class="footer-link">Proposta pedagógica</button>
+      </div>
+      <div>
+       <h2 class="mb-3">Plataforma</h2>
+       <button type="button" data-view="activity" class="footer-link">Atividade de padrões</button>
+       <button type="button" data-view="teacher" class="footer-link">Área do professor</button>
+       <button type="button" data-view="family" class="footer-link">Para as famílias</button>
+       <button type="button" data-view="coordination" class="footer-link">Coordenação</button>
+      </div>
+      <div>
+       <h2 class="mb-3">Informações</h2>
+       <button type="button" data-view="about" data-focus="accessibility-title" class="footer-link">Acessibilidade</button>
+       <button type="button" data-view="about" data-focus="privacy-title" class="footer-link">Privacidade</button>
+       <button type="button" data-open-demo class="footer-link">Contato</button>
+      </div>
+      <div>
+       <h2 class="mb-3">O projeto</h2>
+       <p class="text-[#E4F0FF]">Uma plataforma educacional para tornar a matemática mais próxima, divertida e significativa desde os primeiros anos.</p>
+      </div>
+     </div>
+     <p class="border-t border-white/20 mt-10 pt-6 text-[#E4F0FF]">© 2026 MATEMATICANDO · Matemática para brincar, descobrir e aprender.</p>
+    </div>
+   </footer>
+  </div>
+
+  <div id="demo-modal" class="modal-backdrop" hidden>
+   <div class="dialog-panel" role="dialog" aria-modal="true" aria-labelledby="demo-title" aria-describedby="demo-notice">
+    <button id="demo-close" type="button" class="dialog-close" aria-label="Fechar janela"><i data-lucide="x"></i></button>
+    <h2 id="demo-title" class="pr-10 mb-4">Solicitar demonstração</h2>
+    <p id="demo-notice" class="soft mb-6">Este é um formulário demonstrativo: nada é enviado nem armazenado. Use apenas dados fictícios.</p>
+    <form id="demo-form" novalidate>
+     <div class="grid sm:grid-cols-2 gap-x-4">
+      <div class="mb-4"><label for="demo-name">Nome</label><input id="demo-name" class="field" autocomplete="off" maxlength="80" required></div>
+      <div class="mb-4"><label for="demo-email">E-mail</label><input id="demo-email" class="field" type="email" autocomplete="off" maxlength="120" required></div>
+      <div class="mb-4"><label for="demo-institution">Instituição</label><input id="demo-institution" class="field" autocomplete="off" maxlength="100" required></div>
+      <div class="mb-4"><label for="demo-role">Função</label><input id="demo-role" class="field" autocomplete="off" maxlength="80" required></div>
+      <div class="mb-4 sm:col-span-2"><label for="demo-city">Cidade</label><input id="demo-city" class="field" autocomplete="off" maxlength="80" required></div>
+      <div class="mb-4 sm:col-span-2"><label for="demo-message">Mensagem</label><textarea id="demo-message" class="field" rows="3" maxlength="600" required></textarea></div>
+     </div>
+     <p id="demo-error" class="text-[#9b321f] mb-4" role="alert" hidden></p>
+     <button id="demo-submit" class="btn btn-yellow" type="submit">Enviar solicitação</button>
+    </form>
+    <div id="demo-confirmation" hidden role="status" aria-live="polite">
+     <p class="soft mb-5">Solicitação registrada nesta demonstração. Em uma versão real, nossa equipe entraria em contato. Nenhum dado foi enviado.</p>
+     <button id="demo-again" type="button" class="btn btn-outline">Preencher novamente</button>
+    </div>
+   </div>
+  </div>
+
+  <script>
+(() => {
+  if (window.lucide) lucide.createIcons();
+  const views = [...document.querySelectorAll('.view')];
+  const viewHistory = [];
+  const records = [];
+  const patterns = [
+    {figures:['circle','square','circle','square'],answer:'circle',name:'círculo e quadrado'},
+    {figures:['triangle','circle','triangle','circle'],answer:'triangle',name:'triângulo e círculo'},
+    {figures:['square','triangle','square','triangle'],answer:'square',name:'quadrado e triângulo'}
+  ];
+  const symbols = {circle:'●',square:'■',triangle:'▲'};
+  const names = {circle:'círculo',square:'quadrado',triangle:'triângulo'};
+  let current = 'home', round = 0, solved = false, returnFocus = null;
+
+  function closeMenu() {
+    document.getElementById('site-nav').classList.remove('is-open');
+    document.getElementById('menu-toggle').setAttribute('aria-expanded','false');
+  }
+  function showView(id, remember = true, focusId) {
+    const target = document.getElementById(id);
+    if (!target || !target.classList.contains('view')) return;
+    if (id !== current && remember) viewHistory.push(current);
+    current = id;
+    views.forEach(view => { view.hidden = view.id !== id; });
+    document.getElementById('navigation-actions').hidden = id === 'home';
+    closeMenu();
+    requestAnimationFrame(() => {
+      const focusTarget = focusId ? document.getElementById(focusId) : target.querySelector('h1');
+      if (id !== 'home' && focusTarget) {
+        focusTarget.tabIndex = -1;
+        focusTarget.focus({preventScroll:true});
+      }
+      if (focusId && focusTarget) focusTarget.scrollIntoView({block:'start'});
+      else window.scrollTo({top:0,behavior:'instant'});
+    });
+  }
+  document.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => showView(button.dataset.view,true,button.dataset.focus)));
+  document.querySelectorAll('[data-anchor]').forEach(button => button.addEventListener('click', () => {
+    showView('home');
+    requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById(button.dataset.anchor)?.scrollIntoView({block:'start'})));
+  }));
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    const open = document.getElementById('site-nav').classList.toggle('is-open');
+    document.getElementById('menu-toggle').setAttribute('aria-expanded',String(open));
+  });
+  document.getElementById('back-button').addEventListener('click', () => showView(viewHistory.pop() || 'home',false));
+
+  function renderRound() {
+    const sequence = document.getElementById('sequence');
+    sequence.replaceChildren();
+    patterns[round % patterns.length].figures.forEach(figure => {
+      const token = document.createElement('span');
+      token.className = 'sequence-token';
+      token.dataset.shape = figure;
+      token.textContent = symbols[figure];
+      token.setAttribute('role','img');
+      token.setAttribute('aria-label',names[figure]);
+      sequence.append(token);
+    });
+    const unknown = document.createElement('span');
+    unknown.className = 'sequence-token';
+    unknown.textContent = '?';
+    unknown.setAttribute('role','img');
+    unknown.setAttribute('aria-label','Próxima figura');
+    sequence.append(unknown);
+    solved = false;
+    document.querySelectorAll('.choice').forEach(button => { button.disabled = false; });
+    document.getElementById('activity-feedback').textContent = 'Observe o padrão e escolha a próxima figura.';
+  }
+  function renderTeacher() {
+    const correct = records.filter(item => item.correct).length;
+    document.getElementById('teacher-summary').textContent = `${records.length} tentativa${records.length === 1 ? '' : 's'} nesta utilização · ${correct} acerto${correct === 1 ? '' : 's'}.`;
+    document.getElementById('teacher-empty').hidden = records.length > 0;
+    const list = document.getElementById('teacher-records');
+    while (list.children.length < records.length) {
+      const index = list.children.length, item = records[index], li = document.createElement('li');
+      li.className = 'soft';
+      li.textContent = `Tentativa ${index + 1}: sequência de ${item.pattern}; escolha: ${item.choice}; ${item.correct ? 'correta' : 'nova tentativa necessária'}.`;
+      list.append(li);
+    }
+  }
+  document.querySelectorAll('.choice').forEach(button => button.addEventListener('click', () => {
+    if (solved) return;
+    const pattern = patterns[round % patterns.length];
+    const correct = button.dataset.choice === pattern.answer;
+    records.push({pattern:pattern.name,choice:names[button.dataset.choice],correct});
+    renderTeacher();
+    document.getElementById('activity-feedback').textContent = correct
+      ? `Muito bem! A próxima figura é ${names[pattern.answer]}. O padrão se repete.`
+      : `Vamos olhar de novo! Depois de ${names[pattern.figures[3]]}, o padrão recomeça. Tente outra vez.`;
+    if (correct) {
+      solved = true;
+      document.querySelectorAll('.choice').forEach(choice => { choice.disabled = true; });
+    }
+  }));
+  document.getElementById('new-sequence').addEventListener('click', () => { round++; renderRound(); });
+
+  document.getElementById('download-report').addEventListener('click', event => {
+    const button = event.currentTarget, status = document.getElementById('report-status');
+    button.disabled = true;
+    status.hidden = false;
+    status.textContent = 'Preparando o relatório...';
+    let url;
+    try {
+      const lines = [
+        'MATEMATICANDO — Relatório demonstrativo',
+        'Exemplos fictícios. Não representam pessoas ou turmas reais.','',
+        'Experiências coletivas ilustrativas:',
+        'Jogos de percurso: explorar trajetos e posições.',
+        'Organização de materiais: conversar sobre formas, grupos e quantidades.','',
+        `Atividade nesta utilização: ${records.length} tentativas; ${records.filter(item => item.correct).length} acertos.`,
+        'Nenhum nome ou dado individual é incluído.'
+      ];
+      url = URL.createObjectURL(new Blob([lines.join('\n')], {type:'text/plain;charset=utf-8'}));
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'matematicando-relatorio-demonstrativo.txt';
+      document.body.append(link);
+      link.click();
+      link.remove();
+      status.textContent = 'Download iniciado. Relatório demonstrativo sem dados pessoais.';
+    } catch (_) {
+      status.textContent = 'Não foi possível baixar o relatório. Tente novamente pelo botão acima.';
+    } finally {
+      if (url) setTimeout(() => URL.revokeObjectURL(url),1000);
+      button.disabled = false;
+    }
+  });
+
+  const modal = document.getElementById('demo-modal');
+  function openDemo(trigger) {
+    returnFocus = trigger;
+    document.getElementById('demo-form').reset();
+    document.getElementById('demo-form').hidden = false;
+    document.getElementById('demo-confirmation').hidden = true;
+    document.getElementById('demo-error').hidden = true;
+    modal.hidden = false;
+    document.getElementById('demo-close').focus();
+  }
+  function closeDemo() {
+    modal.hidden = true;
+    returnFocus?.focus();
+  }
+  document.querySelectorAll('[data-open-demo]').forEach(button => button.addEventListener('click', () => openDemo(button)));
+  document.getElementById('demo-close').addEventListener('click',closeDemo);
+  modal.addEventListener('click', event => { if (event.target === modal) closeDemo(); });
+  document.addEventListener('keydown', event => {
+    if (modal.hidden) return;
+    if (event.key === 'Escape') { closeDemo(); return; }
+    if (event.key !== 'Tab') return;
+    const focusable = [...modal.querySelectorAll('button:not([disabled]),input:not([disabled]),textarea:not([disabled])')].filter(el => !el.closest('[hidden]'));
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
+  document.getElementById('demo-form').addEventListener('submit', event => {
+    event.preventDefault();
+    const fields = [...event.currentTarget.querySelectorAll('input,textarea')];
+    const invalid = fields.find(field => !field.value.trim() || !field.checkValidity());
+    const error = document.getElementById('demo-error');
+    if (invalid) {
+      error.textContent = 'Confira e preencha todos os campos com informações válidas. Use apenas dados fictícios.';
+      error.hidden = false;
+      invalid.focus();
+      return;
+    }
+    error.hidden = true;
+    event.currentTarget.hidden = true;
+    document.getElementById('demo-confirmation').hidden = false;
+    document.getElementById('demo-again').focus();
+  });
+  document.getElementById('demo-again').addEventListener('click', () => {
+    document.getElementById('demo-form').reset();
+    document.getElementById('demo-confirmation').hidden = true;
+    document.getElementById('demo-form').hidden = false;
+    document.getElementById('demo-name').focus();
+  });
+  renderRound();
+  renderTeacher();
+})();
+  </script>
+ </body>
+</html>
